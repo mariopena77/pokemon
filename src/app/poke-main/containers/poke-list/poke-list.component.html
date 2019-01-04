@@ -1,0 +1,14 @@
+<div class="row" id="books">
+    <div *ngFor="let pokemon of pokeList?.results" class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+        <app-poke-card [poke]="pokemon"></app-poke-card>
+    </div>
+</div>
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item"><a class="page-link" [routerLink]="" (click)="setPage(currentPage - 1)">Previous</a></li>
+      <li class="page-item" [ngClass]="(page1 === currentPage) ? 'active': '' "><a class="page-link" [routerLink]="" (click)="setPage(page1)">{{ page1 }}</a></li>
+      <li class="page-item" [ngClass]="(page2 === currentPage) ? 'active': '' "><a class="page-link" [routerLink]="" (click)="setPage(page2)">{{ page2 }}</a></li>
+      <li class="page-item" [ngClass]="(page3 === currentPage) ? 'active': '' "><a class="page-link" [routerLink]="" (click)="setPage(page3)">{{ page3 }}</a></li>
+      <li class="page-item"><a class="page-link" [routerLink]="" (click)="setPage(currentPage + 1)">Next</a></li>
+    </ul>
+  </nav>

@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <app-top-nav-bar (searchTop)="searchBook($event)" (stateAside)="eventAside($event)"></app-top-nav-bar>
+    </div>
+  </div>
+  <div class="row body-content">
+    <app-aside-left class="col-3 left-aside" [@asideAnimation]="state" [ngClass]="(state == 'close')? 'aside-close': ''"></app-aside-left>
+    <!--<app-main-content [dataBook]="dataBook" class="col-9 main-section"></app-main-content>-->
+    <div class="col-9 main-section">
+      <app-main-content></app-main-content>
+      
+    </div>
+
+  </div>
+</div>
